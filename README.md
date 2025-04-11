@@ -1,9 +1,11 @@
-# Predictive Maintenance for Turbofan Engine RUL(Remaining Useful Life) Estimation
+# 📘 Predictive Maintenance for Turbofan Engine RUL(Remaining Useful Life) Estimation
+
+![A View RUL predictive maintenance](https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/09/169shutterstock_647172922.jpg)
 
 # ⚠️ Disclaimer
 All datasets, information, and reports within this repository are fictional and created solely for illustrative purposes to showcase advanced predictive machine learning techniques. They do not include any real proprietary, confidential, or sensitive information related to any company, organization, or individual.
 
-## Table of Contents
+## 📑 Table of Contents
 1. [Introduction](#introduction)
 2. [Dataset Description](#dataset-description)
 3. [Methodology](#methodology)
@@ -17,10 +19,10 @@ All datasets, information, and reports within this repository are fictional and 
 6. [Conclusion](#conclusion)
 7. [References](#references)
 
-## Introduction
+## 🧠 Introduction
 Predictive maintenance is a critical approach in aerospace engineering to enhance machinery reliability and minimize operational downtime. This project focuses on predicting the Remaining Useful Life (RUL) of turbofan engines using the NASA CMAPSS dataset (FD001). By leveraging machine learning techniques, the goal is to forecast the number of operational cycles an engine can endure before failure, based on multivariate time series data from sensors and operational settings. The methodology employs a sliding window technique for feature extraction, a train-test split for model validation, and Root Mean Square Error (RMSE) as the evaluation metric.
 
-## Dataset Description
+## 📊 Dataset Description
 The dataset, sourced from NASA's CMAPSS Jet Engine Simulated Data (FD001), consists of multivariate time series from 100 training and 100 test trajectories, representing a fleet of turbofan engines. Each trajectory corresponds to a unique engine with varying initial wear and manufacturing differences, considered normal conditions. The data includes:
 
 - **Columns**: 26 variables per row, including:
@@ -36,7 +38,7 @@ The dataset, sourced from NASA's CMAPSS Jet Engine Simulated Data (FD001), consi
 
 The data is noisy due to sensor variability, and the challenge is to predict the RUL for each test trajectory accurately.
 
-## Methodology
+## 📌 Methodology
 
 ### Data Preprocessing
 The raw dataset was cleaned and prepared as follows:
@@ -68,7 +70,7 @@ A machine learning model was developed to predict the **Remaining Useful Life (R
 - **Output**: The model predicts a **continuous RUL value** for each time window, indicating the estimated number of cycles remaining before failure.
 
 
-### Evaluation Metric: RMSE
+### 📈 Evaluation Metric: RMSE
 The Root Mean Square Error (RMSE) was used to evaluate model performance:
 - **Rationale**: RMSE penalizes larger errors more heavily, making it suitable for RUL prediction where precise estimates are critical.
 - **Evaluation**: RMSE was computed on the test set to assess generalization to unseen data.
