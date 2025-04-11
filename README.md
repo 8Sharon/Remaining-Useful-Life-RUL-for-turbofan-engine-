@@ -46,14 +46,14 @@ The raw dataset was cleaned and prepared as follows:
 - **Feature Selection**: Irrelevant or redundant sensors were identified using correlation analysis, retaining only those with significant predictive power.
 - **RUL Labeling**: For the training set, RUL was calculated as the difference between the current cycle and the failure cycle. For the test set, true RUL values were used as provided.
 
-### Sliding Window Approach
+### ⏳Sliding Window Approach
 To capture temporal dependencies in the time series, a sliding window technique was employed:
 - **Window Size**: A fixed window of 30 cycles was used to create input sequences, balancing context retention and computational efficiency.
 - **Feature Extraction**: For each window, statistical features (mean, standard deviation, min, max) were computed for sensor measurements and operational settings, forming a feature vector.
 - **Target Variable**: The RUL at the end of each window was assigned as the target for supervised learning.
 - **Implementation**: The sliding window transformed the time series into a supervised learning problem, with overlapping windows to maximize data utilization.
 
-### Train-Test Split
+### 🔀Train-Test Split
 The dataset was divided as follows:
 - **Training Set**: 100 trajectories (complete run-to-failure data) used for model training.
 - **Test Set**: 100 trajectories (partial sequences) reserved for evaluation, with true RUL values for comparison.
@@ -75,7 +75,7 @@ The Root Mean Square Error (RMSE) was used to evaluate model performance:
 - **Rationale**: RMSE penalizes larger errors more heavily, making it suitable for RUL prediction where precise estimates are critical.
 - **Evaluation**: RMSE was computed on the test set to assess generalization to unseen data.
 
-## Results
+## 📈 Results
 The model achieved the following performance:
 -**Test RMSE**: **19.27 cycles**
 
@@ -89,15 +89,15 @@ The plot illustrates the model's ability to track RUL trends, with deviations ob
 | RMSE (cycles)   | [19.27] |
 
 
-## Discussion
+## 💬 Discussion
 The sliding window approach effectively captured temporal patterns, enabling robust RUL predictions despite sensor noise and varying initial conditions. The RMSE on the test set indicates reasonable accuracy, though higher errors in some trajectories suggest challenges with early fault detection or non-linear degradation patterns. The train-test split ensured unbiased evaluation, while the validation set guided model tuning. Future improvements could include:
 - Experimenting with larger window sizes or dynamic windows.
 - Incorporating additional models (e.g., hybrid CNN-LSTM architectures).
 - Addressing noise through advanced denoising techniques.
 
-## Conclusion
+## ✅Conclusion
 This project successfully developed a predictive maintenance model for turbofan engine RUL estimation using the NASA CMAPSS dataset. By employing a sliding window approach, train-test split, and RMSE evaluation, the model provided actionable insights for maintenance scheduling. The results highlight the potential of machine learning in aerospace applications, with opportunities for further refinement in handling complex fault scenarios.
 
-## References
+## 📚 References
 - A. Saxena, K. Goebel, D. Simon, and N. Eklund, “Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation,” in *Proceedings of the 1st International Conference on Prognostics and Health Management (PHM08)*, Denver, CO, Oct 2008.
 - NASA CMAPSS Jet Engine Simulated Data: [https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data](https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data).
