@@ -1,26 +1,51 @@
 # 📘 Predictive Maintenance for Turbofan Engine RUL(Remaining Useful Life) Estimation
+This project applies machine learning to predict the Remaining Useful Life (RUL) of turbofan engines based on multivariate time series data from sensor readings. By anticipating when maintenance is needed, it helps prevent unexpected failures and optimizes engine servicing schedules in aerospace operations.
 
 ![A View RUL predictive maintenance](https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/09/169shutterstock_647172922.jpg)
+
 
 # ⚠️ Disclaimer
 All datasets, information, and reports within this repository are fictional and created solely for illustrative purposes to showcase advanced predictive machine learning techniques. They do not include any real proprietary, confidential, or sensitive information related to any company, organization, or individual.
 
 ## 📑 Table of Contents
 1. [Introduction](#introduction)
-2. [Dataset Description](#dataset-description)
-3. [Methodology](#methodology)
+2.  [Problem Statement](#problem-statement)
+3.  [Objective](#objective)
+4. [Dataset Description](#dataset-description)
+5. [Methodology](#methodology)
    - [Data Preprocessing](#data-preprocessing)
    - [Sliding Window Approach](#sliding-window-approach)
    - [Train-Test Split](#train-test-split)
    - [Model Development](#model-development)
    - [Evaluation Metric: RMSE](#evaluation-metric-rmse)
-4. [Results](#results)
-5. [Discussion](#discussion)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+6. [Results](#results)
+7. [Discussion](#discussion)
+8. [Conclusion](#conclusion)
+9. [References](#references)
+10. [Contacts](#contacts)
+
 
 ## 🧠 Introduction
 Predictive maintenance is a critical approach in aerospace engineering to enhance machinery reliability and minimize operational downtime. This project focuses on predicting the Remaining Useful Life (RUL) of turbofan engines using the NASA CMAPSS dataset (FD001). By leveraging machine learning techniques, the goal is to forecast the number of operational cycles an engine can endure before failure, based on multivariate time series data from sensors and operational settings. The methodology employs a sliding window technique for feature extraction, a train-test split for model validation, and Root Mean Square Error (RMSE) as the evaluation metric.
+
+## ❓ Problem Statement
+
+In aerospace operations, unexpected engine failures can lead to costly downtime, safety risks, and inefficient maintenance planning. Traditional maintenance strategies often rely on predefined service intervals, which may be either too conservative or dangerously delayed.
+
+This project addresses the challenge of estimating the Remaining Useful Life (RUL) of turbofan engines using historical sensor data. The goal is to shift from reactive or scheduled maintenance to a predictive strategy that ensures timely interventions while maximizing asset utilization.
+
+---
+
+## 🎯 Objective
+
+The key objectives of this project are:
+
+- To develop a robust predictive maintenance model that can estimate RUL based on time series data from jet engine sensors.
+- To implement a sliding window approach for feature extraction that captures temporal degradation patterns.
+- To evaluate model performance using RMSE to ensure accurate and reliable predictions.
+- To demonstrate the practical utility of machine learning in forecasting failure points and improving maintenance strategies in aviation.
+
+---
 
 ## 📊 Dataset Description
 The dataset, sourced from NASA's CMAPSS Jet Engine Simulated Data (FD001), consists of multivariate time series from 100 training and 100 test trajectories, representing a fleet of turbofan engines. Each trajectory corresponds to a unique engine with varying initial wear and manufacturing differences, considered normal conditions. The data includes:
@@ -101,3 +126,13 @@ This project successfully developed a predictive maintenance model for turbofan 
 ## 📚 References
 - A. Saxena, K. Goebel, D. Simon, and N. Eklund, “Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation,” in *Proceedings of the 1st International Conference on Prognostics and Health Management (PHM08)*, Denver, CO, Oct 2008.
 - NASA CMAPSS Jet Engine Simulated Data: [https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data](https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data).
+
+---
+
+## 📬 Contacts
+
+For any questions, collaborations, or suggestions, feel free to get in touch:
+
+- 📧 **Email**: [njerisharon611@gmail.com](njerisharon6112gmail.com)  
+- 💻 **GitHub**: [8Sharon](https://github.com/8Sharon)  
+- 🛠 **Project Issues**: Use the [GitHub Issues](https://github.com/8Sharon/Remaining-Useful-Life-RUL-for-turbofan-engine/issues) tab for bug reports or feature requests.
